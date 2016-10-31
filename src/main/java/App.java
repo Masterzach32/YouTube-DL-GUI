@@ -102,8 +102,6 @@ public class App extends Application {
         h.getChildren().addAll(indicator, download);
         pane.add(h, 2, 2);
 
-
-        //pane.setGridLinesVisible(true);
         borderPane.setCenter(pane);
 
         Scene scene = new Scene(borderPane, 400, 160);
