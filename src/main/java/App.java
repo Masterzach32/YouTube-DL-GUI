@@ -1,31 +1,18 @@
-/**
- * Created by zach on 10/28/16.
- */
-
 import javafx.application.Application;
 import javafx.concurrent.Task;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
-import javafx.scene.effect.DropShadow;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
-import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
-import javafx.scene.text.TextAlignment;
 import javafx.stage.DirectoryChooser;
-import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.List;
-import java.util.concurrent.ExecutorService;
 
 public class App extends Application {
 
@@ -132,7 +119,6 @@ public class App extends Application {
     }
 
     private boolean checkBinaries() {
-        // youtube-dl
         try {
             new ProcessBuilder("youtube-dl").start().waitFor();
         } catch (InterruptedException | IOException e) {
