@@ -81,7 +81,7 @@ public class App extends Application {
         h.setAlignment(Pos.CENTER_RIGHT);
         download = new Button("Start");
         download.setOnAction(event -> {
-            if(urlField.getText().length() < 11 || !urlField.getText().contains("youtube.com")) {
+            if(urlField.getText().length() < 11 || !urlField.getText().contains("youtube.com") || urlField.getText().indexOf("?v=") + 14 > urlField.getText().length()) {
                 info.setFill(Color.FIREBRICK);
                 info.setText("Please enter a valid YouTube URL!");
             } else {

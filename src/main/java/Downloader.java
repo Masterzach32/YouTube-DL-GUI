@@ -114,8 +114,13 @@ public class Downloader extends Task {
                         }
                         toFFmpeg.flush();
                         Platform.runLater(() -> {
-                            App.info.setFill(Color.GREEN);
-                            App.info.setText("Converted " + title);
+                            if(title == null) {
+                                App.info.setFill(Color.FIREBRICK);
+                                App.info.setText("Couldn't find video " + id);
+                            } else {
+                                App.info.setFill(Color.GREEN);
+                                App.info.setText("Converted " + title);
+                            }
                         });
                     } catch (IOException e) {
                         //If the pipe being closed caused this problem, it was because it tried to write when it closed.
